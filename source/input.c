@@ -19,10 +19,10 @@ void getcmd(char* line, char** tokens)
     echo(1);
     for(size_t i = 0; (line[i] = getchar()) && (i < LINE - 1); ++i)
     {
+        if(line[i] == '\n') { line[i] = 0; break; }
         putc(line[i], stdout);
 
         if(line[i] == 0x7f && i != 0) { if(line[0] != 0x7f) { printf("\b \b"); }; i -= 2; }
-        if(line[i] == '\n') { line[i] = 0; break; }
     }
     echo(0);
 

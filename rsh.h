@@ -7,7 +7,7 @@
 
 static char shell$[] = "[\e[38;5;33m\\u\e[38;5;15m@\e[38;5;76m\\h \e[38;5;124m\\d\e[38;5;15m]$ ";
 
-static char history[] = "/home/rixu/.bash_history";
+static char history[] = "~/.bash_history";
 
 int cd(char** argv);
 

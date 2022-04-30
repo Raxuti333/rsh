@@ -44,8 +44,6 @@ void parseArgs(char* line, char** tokens)
 
     memcpy(line, copy, LINE);
 
-    printf("%s", line);
-
     tokens[0] = strtok(line, " ");
     for(size_t i = 1; ((tokens[i] = strtok(NULL, " ")) != NULL) && (i < LINE); ++i);
 }
